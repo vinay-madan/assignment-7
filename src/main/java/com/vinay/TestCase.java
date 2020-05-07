@@ -46,11 +46,10 @@ public class TestCase {
 
         }
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
 
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
-
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
 
         driver.get("https://bing.com");
         driver.manage().window().maximize();
